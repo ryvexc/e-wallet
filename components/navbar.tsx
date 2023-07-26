@@ -37,12 +37,20 @@ export default function Navbar({ userdata, active }: any): JSX.Element {
         <h1 className="text-xs font-extralight tracking-wider">MENU</h1>
         <div className="grid gap-2">
           <Link href="/" className={"flex items-center gap-3 p-2 menu-hover duration-75 " + (active == "home" && "menu-active")}>
-            <FontAwesomeIcon icon={faNoteSticky} className="text-xl" />
-            <h1 className="text-sm">Notes</h1>
+            <FontAwesomeIcon icon={faHouse} className="text-xl" />
+            <h1 className="text-sm">Dashboard</h1>
           </Link>
-          <Link href="/search" className={"flex items-center gap-3 p-2 menu-hover duration-75 " + (active == "search" && "menu-active")}>
-            <FontAwesomeIcon icon={faMagnifyingGlass} className="text-xl" />
-            <h1 className="text-sm">Search</h1>
+          <Link href="/" className={"flex items-center gap-3 p-2 menu-hover duration-75 " + (active == "transaction" && "menu-active")}>
+            <FontAwesomeIcon icon={faMoneyBill} className="text-xl" />
+            <h1 className="text-sm">Transaction</h1>
+          </Link>
+          <Link href="/" className={"flex items-center gap-3 p-2 menu-hover duration-75 " + (active == "history" && "menu-active")}>
+            <FontAwesomeIcon icon={faHistory} className="text-xl" />
+            <h1 className="text-sm">History</h1>
+          </Link>
+          <Link href="/search" className={"flex items-center gap-3 p-2 menu-hover duration-75 " + (active == "notification" && "menu-active")}>
+            <FontAwesomeIcon icon={faBell} className="text-xl" />
+            <h1 className="text-sm">Notification</h1>
           </Link>
         </div>
       </div>
